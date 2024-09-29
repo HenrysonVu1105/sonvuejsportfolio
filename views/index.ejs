@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+<body>
+  <%- include('partials/header') %>
+  <main>
+    <div class="index-container">
+      <h1>Welcome to Em Bong Xing Dep</h1>
+      <p>Hi, I’m <span>Bong Nha Giau</span>, biet nau an thich trai dep</p>
+      
+      <p><strong>Mission:</strong> tho san hong hai nhi 2k5</p>
+    </div>
+    <div class="index-buttons">
+      
+        <a href="/about" class="button">Learn More About Ngoc Ha Cute</a>
+    </div>
+    </main>
+    <script>
+      // On the home page, retrieve and log the data
+      const contactData = JSON.parse(localStorage.getItem('contactData'));
+      if (contactData) {
+          console.log('Submitted Data:', contactData);
+          localStorage.removeItem('contactData'); // Clear data after logging (optional)
+      }
+  </script>
+  <%- include('partials/footer') %>
+</body>
+</html>
