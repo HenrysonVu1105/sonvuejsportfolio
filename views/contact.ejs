@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+<body>
+    <%- include('partials/header') %>
+    <h1 class="contact-header">Contact Me</h1>
+    <div class="contact-container">
+        <form id="contact-form" action="/submit-contact" method="POST">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name">
+            </div>
+            <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" id="contactNumber" name="contactNumber" required placeholder="Enter your contact number">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" rows="10"  name="message" placeholder="Enter your message"></textarea>
+            </div>
+            <div class="control-button">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+        <div class='contact-panel'>
+            <img src="/images/ngocha1.jpg" class="NgocHa1">
+            <button id="toggle-button">Click here for more contact information</button>
+            <div id="panel-content" style="display:none;">
+                <a href="mailto:hvu46@my.centennialcollege.ca" class="gmail">hvu46@my.centennialcollege.ca</a><br>
+                <a href="tel:123-466-7890">123-456-7890</a>
+                <p>Student ID: 301366093</p>
+                <p>Ontario, Canada - M1G 3T8</p>
+            </div>
+        </div>
+    </div>
+    <%- include('partials/footer') %>
+    <script>
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent actual form submission
+
+            // Retrieve values from the form fields
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const contactNumber = document.getElementById('contactNumber').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Store the data in local storage
+            localStorage.setItem('contactData', JSON.stringify({
+                firstName,
+                lastName,
+                contactNumber,
+                email,
+                message
+            }));
+            window.location.href = '/'; // Redirect to the home page
+        });
+        document.getElementById("toggle-button").onclick = function() {
+            const panel = document.getElementById("panel-content");
+            panel.style.display = (panel.style.display === "none" || panel.style.display === "") ? "block" : "none";
+        };
+    </script>
+</body>
+</html>
