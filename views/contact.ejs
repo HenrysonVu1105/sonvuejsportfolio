@@ -1,3 +1,9 @@
+<!-- 
+  File name: contact.ejs
+  Student Name: Son Vu
+  Student ID: 301366093
+  Date: 29 Sep
+-->
 <!DOCTYPE html>
 <html lang="en">
     <%- include('partials/head') %>
@@ -33,7 +39,7 @@
         </form>
         <div class='contact-panel'>
             <img src="/images/ngocha1.jpg" class="NgocHa1">
-            <button id="toggle-button">Click here for more contact information</button>
+            <button id="toggle-button">Click here for more contact information</button> <!-- button handle panel display-->
             <div id="panel-content" style="display:none;">
                 <a href="mailto:hvu46@my.centennialcollege.ca" class="gmail">hvu46@my.centennialcollege.ca</a><br>
                 <a href="tel:123-466-7890">123-456-7890</a>
@@ -44,6 +50,7 @@
     </div>
     <%- include('partials/footer') %>
     <script>
+        //function to capture informations from the form
         const form = document.getElementById('contact-form');
         form.addEventListener('submit', (event) => {
             event.preventDefault(); // Prevent actual form submission
@@ -65,6 +72,7 @@
             }));
             window.location.href = '/'; // Redirect to the home page
         });
+        // function to display hidden content
         document.getElementById("toggle-button").onclick = function() {
             const panel = document.getElementById("panel-content");
             panel.style.display = (panel.style.display === "none" || panel.style.display === "") ? "block" : "none";

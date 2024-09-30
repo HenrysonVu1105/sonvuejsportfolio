@@ -1,3 +1,9 @@
+/*
+  File name: server.js
+  Student Name: Son Vu
+  Student ID: 301366093
+  Date: 29 Sep
+*/
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -36,7 +42,7 @@ app.get('/contact', (req, res) => {
 
 
 // Start the server
-const PORT = process.env.PORT || 3107;  // Use environment variable or default to 3000
+const PORT = process.env.PORT || 3107;  
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

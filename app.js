@@ -1,3 +1,9 @@
+/* 
+  File name: app.js
+  Student Name: Son Vu
+  Student ID: 301366093
+  Date: 29 Sep
+*/
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -5,7 +11,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 // Import routers
-var indexRouter = require('./routes/index'); // Main router for home, about, projects, services, and contact
+var indexRouter = require('./routes/index'); 
 var usersRouter = require('./routes/users');  
 var app = express();
 
@@ -22,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Set up routes
 app.use('/', indexRouter);  // Use the index router for main routes
-app.use('/users', usersRouter);  // Use users router
+app.use('/users', usersRouter); 
 
 // Catch 404 and forward to error handler
 app.use(function(req, res, next) {

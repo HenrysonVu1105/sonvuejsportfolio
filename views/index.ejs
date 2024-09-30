@@ -1,3 +1,9 @@
+<!-- 
+  File name: index.ejs
+  Student Name: Son Vu
+  Student ID: 301366093
+  Date: 29 Sep
+-->
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head') %>
@@ -11,16 +17,15 @@
       <p><strong>Mission:</strong> tho san hong hai nhi 2k5</p>
     </div>
     <div class="index-buttons">
-      
         <a href="/about" class="button">Learn More About Ngoc Ha Cute</a>
     </div>
     </main>
     <script>
-      // On the home page, retrieve and log the data
+      // Display retrieve data through log
       const contactData = JSON.parse(localStorage.getItem('contactData'));
       if (contactData) {
           console.log('Submitted Data:', contactData);
-          localStorage.removeItem('contactData'); // Clear data after logging (optional)
+          localStorage.removeItem('contactData'); 
       }
   </script>
   <%- include('partials/footer') %>

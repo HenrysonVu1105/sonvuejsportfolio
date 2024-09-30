@@ -1,3 +1,10 @@
+/*
+ * File name: styles.css
+ * Student Name: Son Vu
+ * Student ID: 301366093
+ * Date: 29 Sep
+ */
+/* Global style */
 html, body{
   height: 100%;
 }
@@ -6,6 +13,7 @@ body{
   background-repeat: repeat;
   height: 100%;
 }
+/* Nav bar style */
 nav{
   max-width: 90%;
   margin: auto;
@@ -47,6 +55,7 @@ li a::after{
 li a:hover::after{
   width: 70%;
 }
+/* index style */
 main{
   max-width: 100%;
   text-align: center;
@@ -80,6 +89,7 @@ a.button:active {
   transform: scale(0.95);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
+/* about style */
 .about-container{
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -125,6 +135,7 @@ a.resume:active{
   transform: scale(0.95);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
+/* project style */
 h1.project-header{
   text-align: center;
   font-size: 44px;
@@ -157,6 +168,7 @@ h1.project-header{
 .project p{
   font-size: 22px;
 }
+/* service style */
 .service-header{
   text-align: center;
   margin: 0;
@@ -179,6 +191,7 @@ figure{
   align-items: center;     
   margin: 20px;          
 }
+/* contact style */
 .contact-header{
   text-align: center;
 }
